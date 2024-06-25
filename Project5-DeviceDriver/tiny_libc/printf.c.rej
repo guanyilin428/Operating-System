@@ -1,0 +1,16 @@
+--- tiny_libc/printf.c	2021-11-07 11:41:16.901268804 +0800
++++ tiny_libc/printf.c	2020-11-15 19:29:28.000000000 +0800
+@@ -237,3 +236,13 @@ int printf(const char *fmt, ...)
+ 
+     return ret;
+ }
++
++int puts(const char *str)
++{
++    return printf("%s\n", str);
++}
++
++int putchar(int ch)
++{
++    return printf("%c", ch);
++}
